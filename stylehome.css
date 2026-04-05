@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.6);
+}
+
+.logo-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-title span {
+    color: #4da6ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.btn {
+    background: linear-gradient(45deg, #4da6ff, #007bff);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+.botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-hero {
+    padding: 8px 18px;
+    font-size: 16px;
+    width: fit-content;
+}
+
+
+/* SECTIONS */
+section {
+    padding: 120px 60px;
+}
+
+/* HERO */
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero h1 {
+    font-size: 52px;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    color: #aaa;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+/* SOBRE */
+#sobre {
+    background: #111;
+}
+
+/* SERVIÇOS */
+.cards {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 250px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+/* IMAGEM BONITA */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTEÚDO */
+.card h3 {
+    padding: 15px 20px 5px;
+    font-size: 20px;
+}
+
+.card p {
+    padding: 0 20px 20px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.card a {
+    text-decoration: none;
+    color: white;
+}
+
+/* HOVER MAIS PROFISSIONAL */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* CONTATO */
+#contato {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #888;
+}
+
+footer a {
+    text-decoration: none;
+    color: #888;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none; /* esconde menu (simples por enquanto) */
+    }
+
+    /* HERO */
+    section {
+        padding: 100px 20px;
+    }
+
+    #hero h1 {
+        font-size: 32px;
+    }
+
+    #hero p {
+        font-size: 16px;
+    }
+
+    /* BOTÕES */
+    .botoes {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-hero {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* CARDS */
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+
+    header {
+        padding: 20px 30px;
+    }
+
+    section {
+        padding: 110px 30px;
+    }
+
+    #hero h1 {
+        font-size: 40px;
+    }
+}

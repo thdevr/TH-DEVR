@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urban Burger</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0e0e0e;
+color:white;
+line-height:1.6;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:url("https://images.unsplash.com/photo-1550547660-d9450f859349") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+background:rgba(0,0,0,0.65);
+padding:40px;
+border-radius:10px;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:25px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 25px;
+border:none;
+cursor:pointer;
+font-size:16px;
+border-radius:5px;
+transition:.3s;
+text-decoration:none;
+}
+
+.btn-primary{
+background:#ff3c00;
+color:white;
+}
+
+.btn-primary:hover{
+background:#ff6a00;
+}
+
+.btn-secondary{
+background:#25D366;
+color:white;
+}
+
+.btn-secondary:hover{
+opacity:0.8;
+}
+
+/* MENU */
+
+.menu{
+padding:80px 20px;
+text-align:center;
+}
+
+.menu h2{
+font-size:2.5rem;
+margin-bottom:40px;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.card{
+background:#1a1a1a;
+border-radius:10px;
+overflow:hidden;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-body{
+padding:20px;
+}
+
+.card-body h3{
+margin-bottom:10px;
+}
+
+.price{
+color:#ff6a00;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.card-body p{
+font-size:14px;
+margin-bottom:15px;
+color:#ccc;
+}
+
+/* ABOUT */
+
+.about{
+padding:80px 20px;
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.about h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+/* REVIEWS */
+
+.reviews{
+padding:80px 20px;
+background:#141414;
+text-align:center;
+}
+
+.reviews h2{
+margin-bottom:40px;
+font-size:2.5rem;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.review{
+background:#1e1e1e;
+padding:20px;
+border-radius:8px;
+font-style:italic;
+}
+
+/* CONTACT */
+
+.contact{
+padding:80px 20px;
+text-align:center;
+}
+
+.contact h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.contact p{
+margin:5px 0;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+.socials i{
+margin:10px;
+font-size:20px;
+cursor:pointer;
+}
+
+/* FLOAT WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:55px;
+height:55px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:28px;
+box-shadow:0 5px 10px rgba(0,0,0,0.4);
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+<h1>Urban Burger</h1>
+<p>The best burgers in town</p>
+
+<div class="hero-buttons">
+<a href="#menu" class="btn btn-primary">View Menu</a>
+<a href="https://wa.me/5589999999999" class="btn btn-secondary">Order on WhatsApp</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- MENU -->
+
+<section class="menu" id="menu">
+
+<h2>Our Menu</h2>
+
+<div class="menu-grid" id="menuGrid"></div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2>About Us</h2>
+
+<p>
+Urban Burger was created with one mission: to deliver the best gourmet burgers in town.
+We use fresh ingredients, premium meats and unique recipes that make every bite unforgettable.
+</p>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section class="reviews">
+
+<h2>Customer Reviews</h2>
+
+<div class="review-grid">
+
+<div class="review">
+"Absolutely the best burger I've ever had!"
+<br>⭐⭐⭐⭐⭐
+</div>
+
+<div class="review">
+"Amazing taste and fast service."
+<br>⭐⭐⭐⭐⭐
+</div>
+
+<div class="review">
+"The fries are incredible. Highly recommend!"
+<br>⭐⭐⭐⭐⭐
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<h2>Location & Contact</h2>
+
+<p>📍 123 Burger Street</p>
+<p>⏰ Open daily: 18:00 - 23:00</p>
+<p>📞 +55 89 99999-9999</p>
+
+<br>
+
+<a href="https://wa.me/5589999999999" class="btn btn-secondary">
+Order on WhatsApp
+</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="socials">
+<i class="fab fa-instagram"></i>
+<i class="fab fa-facebook"></i>
+<i class="fab fa-twitter"></i>
+</div>
+
+<p>© 2026 Urban Burger</p>
+
+</footer>
+
+<!-- FLOAT BUTTON -->
+
+<a href="https://wa.me/5589999999999" class="whatsapp-float">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+
+const phone = "5589999999999"
+
+const foods = [
+
+{
+name:"Classic Burger",
+price:"$8.99",
+desc:"Juicy beef burger with lettuce and tomato.",
+img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+},
+
+{
+name:"Bacon Burger",
+price:"$10.99",
+desc:"Beef burger with crispy bacon and cheese.",
+img:"https://images.unsplash.com/photo-1550547660-d9450f859349"
+},
+
+{
+name:"Double Cheese Burger",
+price:"$11.99",
+desc:"Two beef patties with double melted cheese.",
+img:"https://images.unsplash.com/photo-1606755962773-d324e0a13086"
+},
+
+{
+name:"Chicken Burger",
+price:"$9.99",
+desc:"Crispy chicken breast with special sauce.",
+img:"https://images.unsplash.com/photo-1606756790138-261d2b21cd6a"
+},
+
+{
+name:"Fries",
+price:"$4.99",
+desc:"Golden crispy french fries.",
+img:"https://images.unsplash.com/photo-1541592106381-b31e9677c0e5"
+},
+
+{
+name:"Soft Drinks",
+price:"$2.99",
+desc:"Coke, Pepsi, Sprite and more.",
+img:"https://images.unsplash.com/photo-1580910051074-3eb694886505"
+}
+
+]
+
+const menu = document.getElementById("menuGrid")
+
+foods.forEach(food=>{
+
+menu.innerHTML+=`
+
+<div class="card">
+
+<img src="${food.img}">
+
+<div class="card-body">
+
+<h3>${food.name}</h3>
+
+<div class="price">${food.price}</div>
+
+<p>${food.desc}</p>
+
+<a class="btn btn-secondary"
+href="https://wa.me/${phone}?text=Hello,%20I%20would%20like%20to%20order:%20${food.name}">
+Order on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+`
+
+})
+
+</script>
+
+</body>
+</html>
